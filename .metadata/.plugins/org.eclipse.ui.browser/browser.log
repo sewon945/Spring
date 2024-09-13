@@ -1,0 +1,25 @@
+
+6월 20, 2024 14:49:20.937 NEW SESSION
+6월 20, 2024 14:49:20.938 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+6월 20, 2024 14:51:06.437 NEW SESSION
+6월 20, 2024 14:51:06.437 Created TensorFlow Lite XNNPACK delegate for CPU.
+6월 20, 2024 15:41:13.666 [24740:7172:0620/154113.666:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+6월 20, 2024 16:03:08.534 [24740:15136:0620/160308.534:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+6월 20, 2024 17:04:39.460 [24740:15136:0620/170439.460:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+6월 20, 2024 23:34:41.969 [24740:15136:0620/233441.968:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+6월 21, 2024 09:35:17.13 [24740:27340:0621/093517.013:ERROR:cert_verify_proc_builtin.cc(1051)] CertVerifyProcBuiltin for global.ib-ibi.com failed:
+6월 21, 2024 09:35:17.14 ----- Certificate i=0 (CN=*.ib-ibi.com,O=KBM Group LLC,L=Louisville,ST=Colorado,C=US) -----
+6월 21, 2024 09:35:17.14 ERROR: Time is after notAfter
+6월 21, 2024 09:35:17.14 
+6월 21, 2024 09:35:17.14 
+6월 21, 2024 11:11:48.864 [24740:7172:0621/111148.864:ERROR:interface_endpoint_client.cc(722)] Message 0 rejected by interface blink.mojom.WidgetHost
+6월 21, 2024 14:54:26.599 [24740:7172:0621/145426.598:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+6월 21, 2024 16:38:49.620 [24740:7172:0621/163849.620:ERROR:device_event_log_impl.cc(196)] [16:38:49.620] Bluetooth: bluetooth_adapter_winrt.cc:1056 Getting Default Adapter failed.
+
+6월 22, 2024 14:35:12.937 NEW SESSION
+6월 22, 2024 14:35:12.937 Created TensorFlow Lite XNNPACK delegate for CPU.
+6월 22, 2024 16:32:42.419 [4308:3488:0622/163242.419:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+7월 08, 2024 22:01:44.746 NEW SESSION
+7월 08, 2024 22:01:44.746 Created TensorFlow Lite XNNPACK delegate for CPU.

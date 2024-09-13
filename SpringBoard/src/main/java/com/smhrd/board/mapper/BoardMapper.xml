@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.board.mapper.BoardMapper">
+	<insert id="boardWrite" parameterType="com.smhrd.board.model.Board">
+		<!-- MYSQL Workbench에서 쓴 것과 똑같이 적기 -->
+		insert into board (title,content,writer,img)
+		values (#{title},#{content},#{writer},#{img});
+	</insert>
+	<!-- Board로 반환한다고 했으니까 인터페이스, 서비스, 컨트롤러에 있는 반환타입(void)를 Board로 바꾸고 리턴해주기 -->
+	<select id="boardContent" resultType="com.smhrd.board.model.Board">
+		<!-- 값이 하나여도 {} 안에는 무조건 채워줘야함 (보기 쉽게 적어주기) -->
+		select * from board where idx=#{idx}
+	</select>
+</mapper>

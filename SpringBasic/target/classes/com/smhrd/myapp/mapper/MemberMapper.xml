@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 인터페이스 파일이랑 같이 보기 -->
+  <!-- mapper 파일이 여러개일 때 식별할 수 있게끔 해준 경로 (파일 이름은 동일하게 MemberMapper라고 해줘야함 -->
+<mapper namespace="com.smhrd.myapp.mapper.MemberMapper">
+			<!-- MemberMapper 인터페이스에서 호출된 메서드 이름을 id에 그대로 써주기 -->
+	<insert id="memberJoin" parameterType="com.smhrd.myapp.model.MavenMember"> 
+		insert into mavenmember values (#{id},#{pw},#{nickname})
+	</insert>
+	<select id="memberLogin" parameterType="com.smhrd.myapp.model.MavenMember"
+						resultType="com.smhrd.myapp.model.MavenMember">
+		select * from mavenmember where id=#{id} and pw=#{pw}
+	</select>
+	
+	<!-- 회원정보 처리는 sql문이 단순하기에 인터페이스에 작성함 -->
+	
+<!-- <delete id="memberDelete">
+		delete from mavenmember where id=#{id}
+	</delete>  -->
+	
+	<!-- 회원 전체 리스트 -->
+<!-- <select id="memberList" resultType="com.smhrd.myapp.model.MavenMember">
+		select * from mavenmember
+	</select>   -->
+</mapper>

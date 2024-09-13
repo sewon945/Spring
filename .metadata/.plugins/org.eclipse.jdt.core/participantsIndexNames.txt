@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+C:\Users\ggg\Desktop\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4151189454.index
+\recycle\src\main\java
+C:\Users\ggg\Desktop\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2658272158.index
+\SpringBasic\src\main\java
+C:\Users\ggg\Desktop\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\299335866.index
+\SpringBoard\src\main\java
+C:\Users\ggg\Desktop\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4275139665.index
+\recycle\src\main\java
+C:\Users\ggg\Desktop\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1431518610.index
+\recycle\src\main\java

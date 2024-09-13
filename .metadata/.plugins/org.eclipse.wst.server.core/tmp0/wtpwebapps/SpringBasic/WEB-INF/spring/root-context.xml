@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- DB 연동을 위한 것! -->
+	<!-- 객체(빈) 3개 만들기(정의하기) -->
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- Hikari CP 빈 등록 : 어떤 객체를 쓸 것인지 만들기 (4개만들었음) -->
+	<!-- HikariConfig hikariConfig = new HikariConfig() : 자바코드 -->
+	<!-- com.zaxxer.hikari 패키지 이름 -->
+	<!-- hikariConfig.setUsername("root") -->
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/maven?serverTimezone=UTC"/>
+		<property name="username" value="root"/>
+		<property name="password" value="1234"/>
+		<!-- DB 연결을 위해 설정 등록해준 것 -->
+	</bean>
+	
+	<!-- Datasource 빈 등록 : Spring 통해서 MySQL에 접근 -->
+	<!-- HikariDataSource dataSource = new HikariDataSource(hikariConfig)와 <constructor-arg ref="hikariConfig"/> 같음 -->
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+		<constructor-arg ref="hikariConfig"/>
+	<!-- 이클립스 mavensample 폴더에서 com.smhrd.database패키지에서 SqlSessionManager파일과 같음? -->
+	</bean>
+	
+	<!-- MyBatis 빈 등록 -->
+	<!-- dataSource라는 필드에다가 dataSource 초기화 -->
+	<!-- id는 변수이름이라 필요없으면 안써도 됨(MyBatis는 따로 쓰지 않을 거라서 id 필요X) -->
+	<bean class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!-- mapper 파일을 스캔할 수 있도록 경로 등록 -->
+	<mybatis-spring:scan base-package="com.smhrd.myapp.mapper"/>
+	
+</beans>
